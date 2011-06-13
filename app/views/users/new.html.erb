@@ -1,0 +1,16 @@
+<% form_for @user do |f| %>
+Username <%= f.text_field :username %><br/>
+Password <%= f.password_field :pwd %><br/>
+Name <%= f.text_field :name %><br/>
+Surname <%= f.text_field :surname %><br/>
+Nickname <%= f.text_field :nickname %><br/>
+Sex <%= f.text_field :sex %><br/>
+Age <%= f.text_field :age %><br/>
+Address <%= f.text_field :address %><br/>
+Role <%= f.text_field :role %><br/>
+Email <%= f.text_field :email %><br/>
+Tel <%= f.text_field :tel %>
+
+<%= submit_tag "Register", :url => { :action => "create"}, :method => :post %>
+
+<% end %>

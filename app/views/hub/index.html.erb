@@ -1,0 +1,12 @@
+<h1>Hub#index</h1>
+<p>Find me in app/views/hub/index.html.erb</p>
+
+
+
+<%= link_to_unless_current "Register", :controller => "users", :action => "new" %>|
+<%= link_to_unless_current "Log in", :controller => "users", :action => "show"%>
+
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+<% yield %>

@@ -1,0 +1,5 @@
+<% form_for :user do |f| %>
+Username <%= f.text_field :username %><br/>
+Password <%= f.password_field :pwd %>
+<%= submit_tag "Log in", :url => { :action => "show"}, :method => :post %>
+<% end %>

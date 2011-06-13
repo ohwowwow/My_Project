@@ -1,0 +1,28 @@
+<h1>Room Status</h1>
+
+<table align="center"style="outline-style:double;">
+  <tr>
+    <th>Room Number</th>
+    <th><dd>Room Name</dd></th>
+    <th><dd>Room Status</dd></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @room_statuses.each do |room_status| %>
+  <tr align="center">
+    <td><%= room_status.room_num %></td>
+    <td><%= room_status.room_name %></td>
+    <td><%= room_status.room_status %></td>
+    <td><%= link_to 'Show', room_status %></td>
+    <td><%= link_to 'Edit', edit_room_status_path(room_status) %></td>
+    <td><%= link_to 'Destroy', room_status, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Room status', new_room_status_path %>
+<%= link_to_unless_current "Home", :controller => :dashboard, :action => :index %>

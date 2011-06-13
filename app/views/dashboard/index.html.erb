@@ -1,0 +1,7 @@
+
+
+Hello  <b class="ize"><%= @current_user.name %></b>
+
+<%= link_to_unless_current "Room Status", :controller => :room_statuses, :action => :index %>
+
+<%= link_to_unless_current "Logout", :controller => "users", :action => "logout" %>

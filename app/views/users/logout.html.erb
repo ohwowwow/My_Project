@@ -1,0 +1,12 @@
+<% if session[:user_id] %>
+<%= link_to_unless_current "Logout", :controller => "users", :action => "logout" %>
+<% else %>
+<%= link_to_unless_current "Register", :controller => "users", :action => "new" %>
+<%= link_to_unless_current "Login", :controller => "users", :action => "show" %>
+<% end %>
+
+
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+<% yield %>
